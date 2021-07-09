@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-import {Inject, ScheduleComponent,Day,Week,WorkWeek,Month,Agenda,
-EventSettingsModel} from '@syncfusion/ej2-react-schedule'; //EventSettings, es para crear citas.
+import {Inject, ScheduleComponent,Day,Week,WorkWeek,Month,Agenda} from '@syncfusion/ej2-react-schedule'; //EventSettings, es para crear citas.
 
 class Calendar extends React.Component {
   render(){
@@ -11,8 +9,5 @@ class Calendar extends React.Component {
     </ScheduleComponent>
   }
 }
-
-
-
 
 export default Calendar;

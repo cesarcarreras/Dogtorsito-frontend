@@ -1,13 +1,13 @@
 import './App.css';
-import Calendar from './components/Calendar';
+import Routes from './Routes';
 
 
 function App() {
   return (
     <div className="App">
-      <Calendar></Calendar>
+      <Routes/>
     </div>
-  );
-}
+  )
+};
 
 export default App;
