@@ -3,7 +3,7 @@ import './styles.css'
 import logo from '../../assets/images/logo.png'
 import { TextInput,Button } from '../../components';
 import {Link} from 'react-router-dom';
-import {loginEndpoint,signupEndpoint} from '../../services/auth-ws'
+import {loginEndpoint,signupEndpoint} from '../../services/auth-ws';
 export default class Auth  extends Component{
 
     state={
@@ -11,7 +11,7 @@ export default class Auth  extends Component{
             //email:''
             //password:''
         }
-    }
+    };
 
     handleChange=(e)=>{
        let  {user} = this.state
@@ -33,7 +33,7 @@ export default class Auth  extends Component{
             .then(res=>{
 
                 localStorage.setItem( "user",JSON.stringify(res.data.result) )
-                history.push('/main')
+                history.push('/dashboard')
             })
             .catch(error =>{
                 console.log("error",error.response)
@@ -58,30 +58,30 @@ export default class Auth  extends Component{
                         {match.path === "/signup" &&
                                 <TextInput
                                 name='name'
-                                textLabel= 'Nombre'
-                                placeholder='Juan Perez'
+                                textLabel= 'Name'
+                                placeholder='Labra Dor'
                                 handleChange={handleChange}
                             />
-
                         }
                         <TextInput
                             name='email'
-                            textLabel= 'Correo electronico'
-                            placeholder='mi@correo.com'
+                            textLabel= 'Email Address'
+                            placeholder='fluffydog@email.com'
                             handleChange={handleChange}
                         />
 
                         <TextInput
                             name='password'
-                            textLabel= 'Contraseña'
+                            textLabel= 'Password'
                             type='password'
-                            placeholder='······'
+                            placeholder='··········'
                             handleChange={handleChange}
                         />
                          {match.path === "/signup" &&
                                 <TextInput
                                 name='confirmPassword'
-                                textLabel= 'Confirma  tu contraseña'
+                                textLabel= 'Confirm your password'
+                                type='password'
                                 placeholder='······'
                                 handleChange={handleChange}
                             />
@@ -90,8 +90,8 @@ export default class Auth  extends Component{
                         {match.path === "/signup" &&
                                 <TextInput
                                 name='pet'
-                                textLabel= '¿Qué tipo de mascota tienes?'
-                                placeholder='Perro, Gato, Hurón, Dragón, etc...'
+                                textLabel= 'What type of pet?'
+                                placeholder='Dog, Cat, Ferret, Dragon, etc...'
                                 handleChange={handleChange}
                             />
                         }
@@ -99,20 +99,22 @@ export default class Auth  extends Component{
                         {match.path === "/signup" &&
                                 <TextInput
                                 name='breed'
-                                textLabel= '¿Qué raza es?'
-                                placeholder='Labrador, Siamés, Egicipcio etc...'
+                                textLabel= 'What is the breed?'
+                                placeholder='Labrador, Siames, Gipsy etc...'
                                 handleChange={handleChange}
                             />
                         }
 
                         <Button
-                            text='Entrar'
-                        />
+                         text={`${
+                             match.path === "/signup" ? "Create Account" : "login"}`}
+                         />
                     </form>
+
                     <span> {`${
-                        match.path !== '/signup' ? "Aun no" : 'Ya' 
-                    } tienes cuenta? |`} 
-                        <Link to={match.path !== "/signup" ? "/signup" :"/login" }>Dale aqui</Link> 
+                        match.path !== '/signup' ? "Don't have an account?" : 'Got an account?'} | `}
+                        <Link to={match.path !== "/signup" ? "/signup" :"/login" }>
+                        Click here</Link>
                     </span>
                 </div>
             </section>

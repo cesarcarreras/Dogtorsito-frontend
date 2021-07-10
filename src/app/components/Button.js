@@ -4,7 +4,7 @@ const Button = ({
     onPress=()=>{},
     disabled
     })=>(
-    <button 
+    <button
        disabled={disabled}
         className={`btn btn-${type}`}
         onClick={onPress}
@@ -13,4 +13,4 @@ const Button = ({
     </button>
 )
 
-export default Button
+export default Button;
