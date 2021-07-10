@@ -5,4 +5,7 @@ export {default as SideBar} from './SideBar';
 export {default as Modal} from './Modal';
 export {default as ListItem} from './ListItem';
 export {default as Calendar} from './Calendar';
-export {default as Slide} from './Slide'
+export {default as Slide} from './Slide';
+export {default as Navbar} from './Navbar';
+export {default as Footer} from './Footer';
+export {default as HomeIcons} from './HomeIcons';
