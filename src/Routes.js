@@ -17,5 +17,5 @@ const Routes = () =>  (
         <Route  path="/dashboard" component={Dashboard} />
     </Switch>
 )
-
+        
 export default Routes
