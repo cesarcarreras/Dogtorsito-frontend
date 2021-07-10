@@ -1,6 +1,6 @@
 const ListItem = ({text,Icon}) =>  (
     <li>
-        <a href="#" className="nav-link text-white">
+        <a href="http" className="nav-link text-white">
             <Icon/>
              Mi curso
         </a>

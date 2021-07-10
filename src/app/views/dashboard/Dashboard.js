@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './styles.css'
-import {SideBar,Modal} from '../../components'
+import {SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint} from  '../../services/auth-ws'
- class Main extends Component{
+ class Dashboard extends Component{
 
     state={
         //JSON.parse(//para regresarllo a obj)
@@ -19,7 +19,6 @@ import { logoutEndpoint} from  '../../services/auth-ws'
             history.push('/login')
         }
     }
-
 
     onClickMenu = () => {
 
@@ -37,11 +36,10 @@ import { logoutEndpoint} from  '../../services/auth-ws'
         })
     }
     render(){
-       const {menus,user} = this.state
+       const {user} = this.state
        const {onLogout} = this
         return(
             <div className="row-app">
-
 
                 <SideBar
                     user={user}
@@ -54,4 +52,4 @@ import { logoutEndpoint} from  '../../services/auth-ws'
 }
 
 
-export default Main
+export default Dashboard

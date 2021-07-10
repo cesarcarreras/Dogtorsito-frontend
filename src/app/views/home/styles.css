@@ -5,17 +5,13 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-.img-background{
-    background-size: cover;
-    width:60vw;
-    height: 100vh;
-    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
 }
 .title-section{
     width:40vw;
     background-color: #2D364C ;
-    height: 100vh;
+    height: 50vh;
     padding:2%;
     display: flex;
     flex-wrap: wrap;
