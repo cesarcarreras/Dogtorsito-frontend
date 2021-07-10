@@ -6,15 +6,14 @@ import Admin from './app/views/admin/Admin.js';
 const SubRoutes = () =>  (
     <Switch>
 
-        {/* para el admin */}
-        <Route  path="/main/list" component={()=><h1>Estas seran listas</h1>} />
-        <Route  path="/main/create-course" component={()=><h1>Estee es el campus</h1>} />
-        <Route  path="/main/create-campus" component={Admin} />
+        {/* ADMIN */}
+        <Route  path="/dashboard/list" component={()=><h1>Estas seran listas</h1>} />
+        <Route  path="/dashboard/create-course" component={()=><h1>Estee es el campus</h1>} />
+        <Route  path="/dashboard/create-campus" component={Admin} />
 
-        {/*USEER  */}
-        <Route  path="/main/create-project" component={()=><h1>Estee es el campus</h1>} />
-        <Route  path="/" component={()=><h1>Holaa este es / en SSUB</h1>} />
-
+        {/*USER  */}
+        <Route  path="/dashboard/create-project" component={()=><h1>Estee es el campus</h1>} />
+        <Route  path="/" component={()=><h1>Holaa este es / en SSUB -SUBROUTE</h1>} />
     </Switch>
 )
 
