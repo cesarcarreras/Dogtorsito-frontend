@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {Component} from "react";
 // reactstrap components
 import {
   Button,
@@ -12,7 +12,7 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-class Footer extends React.Component {
+class Footer extends Component {
   render() {
     return (
       <>

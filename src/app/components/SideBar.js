@@ -11,15 +11,15 @@ const SideBar = ({user,onLogout}) => (
     <ul className="nav nav-pills flex-column mb-auto">
 
       <li>
-        <a href="http" className="nav-link text-white">
+        <a href="/dashboard" className="nav-link text-white">
             <Bootstrap className='bi me-2'/>
-            Dashboard
+            Home
         </a>
       </li>
       <li>
-        <a href="http" className="nav-link text-white">
+        <a href="/dashboard/clients" className="nav-link text-white">
             <Bootstrap className='bi me-2'/>
-            Mis proyectos
+            Clients
         </a>
       </li>
       <li>

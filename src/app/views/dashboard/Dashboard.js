@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './styles.css'
-import {SideBar} from '../../components'
+import {FilterableProductTable, SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint} from  '../../services/auth-ws'
  class Dashboard extends Component{
@@ -40,11 +40,11 @@ import { logoutEndpoint} from  '../../services/auth-ws'
        const {onLogout} = this
         return(
             <div className="row-app">
-
                 <SideBar
                     user={user}
                     onLogout={onLogout}
                 />
+                 <FilterableProductTable/>
                 <SubRoutes/>
             </div>
         )

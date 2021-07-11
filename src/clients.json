@@ -1,0 +1,27 @@
+[
+    {
+        "name" : "Cesar",
+        "email" : "cesarcarreras95@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "pet" : "Dog",
+        "breed" : "Labrador",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"]
+    },
+    {
+        "name" : "Mauricio",
+        "email" : "mau@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "pet" : "Cat",
+        "breed" : "Siames",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"]
+    },
+    {
+        "name" : "Esau",
+        "email" : "esau@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "pet" : "Dragon",
+        "breed" : "Ancient",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"]
+    }
+
+]
