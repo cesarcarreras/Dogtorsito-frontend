@@ -27,7 +27,7 @@ const Navbar = ({}) => (
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link active" href="#" tabindex="-1" aria-disabled="false">Disabled</a>
+                    <a className="nav-link" href="#" tabindex="-1" aria-disabled="false">Disabled</a>
                   </li>
                 </ul>
 

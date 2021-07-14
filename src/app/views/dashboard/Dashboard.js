@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './styles.css'
-import {FilterableProductTable, SideBar} from '../../components'
+import {SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
-import { logoutEndpoint} from  '../../services/auth-ws'
+import { logoutEndpoint } from  '../../services/auth-ws'
  class Dashboard extends Component{
 
     state={
-        //JSON.parse(//para regresarllo a obj)
-        // valor || valor1 si no se cumple uno muestrame el otro valor
+        //JSON.parse(Para regresar a ser objeto)
+        // valor || valor1 si no se cumple uno se muestra otro valor
         user: JSON.parse(localStorage.getItem("user")) || {},
     }
 
@@ -44,7 +44,6 @@ import { logoutEndpoint} from  '../../services/auth-ws'
                     user={user}
                     onLogout={onLogout}
                 />
-                 <FilterableProductTable/>
                 <SubRoutes/>
             </div>
         )

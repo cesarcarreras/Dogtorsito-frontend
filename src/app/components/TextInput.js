@@ -8,7 +8,7 @@ const TextInput = ({
     handleChange = () => {},
     placeholder=''
 }) => (
-    <div className="mb-3">
+    <div>
         {/* con este validamos para mostrar el label */}
     {textLabel && <label
         for="exampleFormControlInput1"

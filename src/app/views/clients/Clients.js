@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import SubRoutes from '../../../SubRoutes';
-import { ClientList, SideBar } from '../../components';
+import { ClientList } from '../../components';
 import ClientInfo from '../../../clients.json'
-import Routes from '../../../Routes';
+import './clients.css'
+
 
 class Clients extends Component{
   state = {
@@ -11,22 +11,9 @@ class Clients extends Component{
     render(){
         const {client_list} = this.state
         return(
-            <section>
-      <div className="navbar navbar-dark bg-primary mb-3">
-        </div>
-         <div className="container">
-          <div className="row">
-           <div className="col-5 extra">
-            <div className="list-group">
+            <section className="client-list">
             <ClientList clients={client_list}/>
-          </div>
-         </div>
-         <SubRoutes/>
-         <Routes/>i
-        </div>
-       </div>
-            <SideBar/>
-         </section>
+           </section>
         )
     }
 }

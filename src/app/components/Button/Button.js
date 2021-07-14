@@ -1,3 +1,5 @@
+import './button.css';
+
 const Button = ({
     text='Press me',
     type='primary',
@@ -6,7 +8,7 @@ const Button = ({
     })=>(
     <button
        disabled={disabled}
-        className={`btn btn-${type}`}
+        className={`btn btn-${type} button-form`}
         onClick={onPress}
     >
         {text}

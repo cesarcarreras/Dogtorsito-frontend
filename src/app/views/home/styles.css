@@ -32,3 +32,6 @@
   display:flex;
   justify-content: space-around;
 }
+.container-fields{
+    margin: 20px;
+}
