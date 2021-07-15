@@ -9,3 +9,4 @@ export {default as Slide} from './Slide';
 export {default as Navbar} from './Navbar';
 export {default as Footer} from './Footer';
 export {default as HomeIcons} from './HomeIcons';
+export {default as Inventory} from './Inventory';

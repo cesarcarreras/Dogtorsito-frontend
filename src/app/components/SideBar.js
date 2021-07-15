@@ -21,12 +21,12 @@ const SideBar = ({user,onLogout}) => (
             Mis consultas
         </a>
       </li>
-      {user.role === 'ADMIN' && <li>
+      <li>
         <a href="/calendar" className="nav-link text-white">
             <Bootstrap  className='bi me-2'/>
             Calendario
         </a>
-      </li>}
+      </li>
     
       {user.role === 'ADMIN' && <li>
         <a href="http" className="nav-link text-white">
