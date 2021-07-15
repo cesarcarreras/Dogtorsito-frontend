@@ -110,7 +110,12 @@ export default class Auth  extends Component{
             <div className="overlay">
                 <div className="overlay-panel overlay-right">
                     <h1 className="h1-form">Hello, Doggo lover!</h1>
-                    <p className="p-form">Enter your personal details and start journey with us</p>
+                    {match.path === "/signup" ?
+                    <p className="p-form">If you already have an account, click on the button to login!</p>
+                    :
+                    <p className="p-form"> If you don't have an account yet, enter your personal<br/>details and start journey with us</p>
+
+                    }
                     <Button text={`${match.path === "/login" ? "Sign up" : "Sign in"}`}/>
                 </div>
             </div>

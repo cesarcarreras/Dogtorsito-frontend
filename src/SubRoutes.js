@@ -1,7 +1,6 @@
 import React from 'react';
 import {Switch,Route} from 'react-router-dom';
 //Van mis vistas que see mostraran
-import Admin from './app/views/admin/Admin.js';
 import { Clients } from './app/views/index.js';
 
 const SubRoutes = () =>  (

@@ -13,8 +13,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-
-
 .body-form {
     font-family: 'Montserrat', sans-serif;
     background: #f6f5f7;
@@ -22,9 +20,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    height: 180vh;
     margin: -20px 0 50px;
-		margin-top: 20px;
+	margin-top: 20px;
 }
 
 .h1-form {
@@ -34,7 +32,7 @@
 
 .p-form {
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: .5px;
     margin: 20px 0 30px;
@@ -59,7 +57,7 @@
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 600px;
 }
 
 .form-container {
