@@ -1,12 +1,14 @@
+import './button.css';
+
 const Button = ({
     text='Press me',
-    type='primary',
+    type='submit',
     onPress=()=>{},
     disabled
     })=>(
     <button
        disabled={disabled}
-        className={`btn btn-${type}`}
+        className={`btn-${type} button-form`}
         onClick={onPress}
     >
         {text}

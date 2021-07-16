@@ -1,12 +1,11 @@
 import React from 'react';
 import './styles.css'
-import logo from '../../assets/images/logo.png'
 import {Link}  from 'react-router-dom'
-import { Footer, Navbar, Slide, HomeIcons } from '../../components';
+import { Footer, Navbar, Slide, HomeIcons, SearchBar } from '../../components';
 
 
                 //react-router-dom
-const Home = ({}) => (
+const Home = () => (
     <section>
     <Navbar/>
     <section className="home-container" >
@@ -29,13 +28,3 @@ const Home = ({}) => (
 
 
 export default Home;
-
-{/* <div className="title-section">
-<img src={logo} width="30%" alt=""/>
-<h1 className="title-text">
-    Best Software tool for Veterinary
-</h1>
-<span>
-    <Link to="/login">Login</Link> | <Link to="/signup">Signup</Link>
-</span>
-</div> */}

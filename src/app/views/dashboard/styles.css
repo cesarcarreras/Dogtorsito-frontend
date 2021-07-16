@@ -1,4 +1,4 @@
 .row-app{
-    display: flex;
-    flex-direction: row;
-  }
+  border: black solid 1px;
+  margin-left: 16%;
+}
