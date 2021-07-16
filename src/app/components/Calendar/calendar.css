@@ -1,0 +1,15 @@
+.calendar {
+    width: 60%;
+    height: 60%;
+    background-color: white;
+}
+
+.background {
+    background-color: #025E73 ;
+}   
+
+.title {
+    padding: 2%;
+    color: white;
+    background: linear-gradient(to right, #D9D8C7, #6FA6A6) no-repeat 0 0 / cover;
+}
