@@ -1,6 +1,6 @@
 import { _api } from "./api";
 
-//Listar a todos los users
+//Listar a todos los usuarios
 export const usersListEndpoint = () =>_api.get(`/users/students`)
 //para actualizar mi usuario
 export const usersUpdateEndpoint = (data) =>_api.patch(`/users/editMyUser`,data)
