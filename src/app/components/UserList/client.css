@@ -1,9 +1,9 @@
-body{margin-top:20px;}
-
-
+.container{
+	
+}
 /* USER LIST TABLE */
 .user-list tbody td > img {
-    position: relative;
+	position: relative;
 	max-width: 50px;
 	float: left;
 	margin-right: 15px;

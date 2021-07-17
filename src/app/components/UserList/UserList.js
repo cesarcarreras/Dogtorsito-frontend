@@ -2,9 +2,9 @@ import {Link} from 'react-router-dom'
 import './client.css'
 
 const ClientList = ({clients = [0,1,2,3]}) => (
-    <div classNameName="clients-page">
-    <div className="container">
-<div className="row">
+<section>
+<div className="container">
+  <div className="row">
 	<div className="col-lg-12">
 		<div className="main-box clearfix">
 			<div className="table-responsive">
@@ -12,7 +12,7 @@ const ClientList = ({clients = [0,1,2,3]}) => (
 					<tbody>
                     {clients.map((client, index_c) => (
                                 <tr key={index_c}>
-                                    <Link to={{ pathname:"/details", state:client}}/>
+                                    <Link to={{pathname:"/details", state:client}}/>
 							<td>
 								<img src={client.image} alt="" width="80px"/>
 								<a href="#" className="user-link">{client.name}</a>
@@ -53,12 +53,9 @@ const ClientList = ({clients = [0,1,2,3]}) => (
 			</div>
 		</div>
 	</div>
+  </div>
 </div>
-
-</div>
-
-</div>
-
+	</section>
 )
 
 export default ClientList;

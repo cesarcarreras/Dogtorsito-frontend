@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { ClientList } from '../../components';
 import ClientInfo from '../../../clients.json'
-import './clients.css'
 
 
 class Clients extends Component{
@@ -11,8 +10,8 @@ class Clients extends Component{
     render(){
         const {client_list} = this.state
         return(
-            <section className="client-list">
-            <ClientList clients={client_list}/>
+            <section>
+               <ClientList clients={client_list}/>
            </section>
         )
     }

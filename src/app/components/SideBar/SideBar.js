@@ -7,6 +7,24 @@ const SideBar = ({user,onLogout}) => (
     Dogtorsito
   </div>
   <ul className="sidebar-navigation">
+  <li className="header">Clients</li>
+    <li>
+      <a href="/dashboard/clients">
+        <i className="fa fa-home" aria-hidden="true"></i> Clients
+      </a>
+    </li>
+    <li className="header">Calendar</li>
+    <li>
+      <a href="/dashboard/calendar">
+        <i className="fa fa-users" aria-hidden="true"></i> Appointments
+      </a>
+    </li>
+    <li className="header">Inventory</li>
+    <li>
+      <a href="/dashboard/inventory">
+        <i className="fa fa-home" aria-hidden="true"></i> Products
+      </a>
+    </li>
     <li className="header">User</li>
     <li>
       <a href="/dashboard/my-profile">
@@ -16,20 +34,6 @@ const SideBar = ({user,onLogout}) => (
     <li onClick={()=>onLogout()}>
       <a href="/">
         <i className="fa fa-info-circle" aria-hidden="true"></i> Logout
-      </a>
-    </li>
-    <li></li>
-    <li className="header">Calendar</li>
-    <li>
-      <a href="/dashboard/appointments">
-        <i className="fa fa-users" aria-hidden="true"></i> Appointments
-      </a>
-      <li></li>
-    </li>
-    <li className="header">Inventory</li>
-    <li>
-      <a href="/dashboard/inventory">
-        <i className="fa fa-home" aria-hidden="true"></i> Products
       </a>
     </li>
   </ul>

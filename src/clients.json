@@ -6,7 +6,8 @@
         "pet" : "Dog",
         "breed" : "Labrador",
         "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
-        "status" : "Active"
+        "status" : "Active",
+        "signup" : "12-12-2020"
     },
     {
         "name" : "Mauricio",
@@ -15,7 +16,8 @@
         "pet" : "Cat",
         "breed" : "Siames",
         "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
-        "status" : "Active"
+        "status" : "Active",
+        "signup" : "12-20-2019"
     },
     {
         "name" : "Esau",

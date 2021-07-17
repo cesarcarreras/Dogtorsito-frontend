@@ -9,7 +9,6 @@ export {default as Slide} from './Slide';
 export {default as Navbar} from './Navbar';
 export {default as Footer} from './Footer';
 export {default as HomeIcons} from './HomeIcons';
-export {default as FilterableProductTable} from './Inventory/FilterableProductTable';
-export {default as ClientList} from './ClientList/ClientList';
-export {default as ClientInfo} from './ClientList/ClientInfo';
-export {default as SearchBar} from './SearchBar/SearchBar';
+export {default as Inventory} from './Inventory';
+export {default as ClientList} from './UserList/UserList'
+export {default as PetProfile} from './PetProfile/PetProfile'
