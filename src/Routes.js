@@ -1,5 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
+
 //Importar las vistas
 import {Home, Auth} from './app/views';
 import Dashboard from './app/views/dashboard/Dashboard';
