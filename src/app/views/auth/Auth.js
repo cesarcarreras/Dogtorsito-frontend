@@ -1,6 +1,5 @@
 import React,  {Component} from 'react';
 import './styles.css'
-import logo from '../../assets/images/logo.png'
 import { TextInput,Button } from '../../components';
 import {Link} from 'react-router-dom';
 import {loginEndpoint,signupEndpoint} from '../../services/auth-ws';

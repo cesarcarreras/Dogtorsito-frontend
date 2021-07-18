@@ -1,14 +1,15 @@
 export {default as TextInput } from './TextInput';
-export {default as Card } from './Card' ;
 export {default as Button } from './Button/Button';
 export {default as SideBar} from './SideBar/SideBar';
 export {default as Modal} from './Modal';
 export {default as ListItem} from './ListItem';
 export {default as Calendar} from './Calendar/Calendar';
-export {default as Slide} from './Slide';
-export {default as Navbar} from './Navbar';
-export {default as Footer} from './Footer';
-export {default as HomeIcons} from './HomeIcons';
+export {default as Navbar} from './Navbar/Navbar';
+export {default as Footer} from './Footer/Footer';
 export {default as Inventory} from './Inventory';
 export {default as ClientList} from './UserList/UserList'
 export {default as PetProfile} from './PetProfile/PetProfile'
+export {default as Cover} from './Cover/Cover'
+export {default as About} from './About/About'
+export {default as CardServices} from './CardServices/CardServices'
+export {default as Faq} from './Team/Team'
