@@ -1,101 +1,81 @@
 import './sidebar.css'
 
+import userIcon from '../../assets/images/user.png';
+import invIcon from '../../assets/images/inventory.png';
+import apoIcon from '../../assets/images/calendar.png';
+import histIcon from '../../assets/images/hospital.png';
+import homIcon from '../../assets/images/home.png'
+import logIcon from '../../assets/images/logout.png'
+
 const SideBar = ({user,onLogout}) => (
-<section>
-<div className="sidebar-container">
-  <div className="sidebar-logo">
-    Dogtorsito
+  <div className="main-app">
+  <div className="sidebar">
+    <nav className="main-nav">
+      <ul className="main-menu">
+        <li className="menu-item active">
+          <a href="/dashboard" className="menu-a">
+            <div className="menu-txt-hld">
+              <i className="fas fa-igloo menu-icon">
+                <img src={homIcon} width="40px" alt="Home Icon"/>
+              </i>
+              <span className="menu-txt">Home</span>
+            </div>
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="/dashboard/clients" className="menu-a">
+            <div className="menu-txt-hld">
+              <i className="fas menu-icon">
+              <img src={histIcon} width="40px" alt="Hospital Icon"/>
+              </i>
+              <span className="menu-txt">Clients</span>
+            </div>
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="/dashboard/calendar" className="menu-a">
+            <div className="menu-txt-hld">
+              <i className="fas menu-icon">
+              <img src={apoIcon} width="40px" alt="Calendar Icon"/>
+              </i>
+              <span className="menu-txt">Appoinments</span>
+            </div>
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="/dashboard/inventory" className="menu-a">
+            <div className="menu-txt-hld">
+              <i className="fas fa-envelope menu-icon">
+              <img src={invIcon} width="40px" alt="Iventory Icon"/>
+              </i>
+              <span className="menu-txt">Inventory</span>
+            </div>
+          </a>
+        </li>
+        <li className="menu-item">
+          <a href="/dashboard/my-profile" className="menu-a">
+            <div className="menu-txt-hld">
+            <i className="fas menu-icon">
+              <img src={userIcon} width="40px" alt="User Icon"/>
+              </i>
+              <span className="menu-txt">{user.name}</span>
+            </div>
+          </a>
+        </li>
+        <li className="menu-item" onClick={()=>onLogout()}>
+          <a href="/" className="menu-a">
+            <div className="menu-txt-hld">
+            <i className="fas menu-icon">
+              <img src={logIcon} width="38px" alt="Logout Icon"/>
+              </i>
+              <span className="menu-txt">Log out</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <ul className="sidebar-navigation">
-  <li className="header">Clients</li>
-    <li>
-      <a href="/dashboard/clients">
-        <i className="fa fa-home" aria-hidden="true"></i> Clients
-      </a>
-    </li>
-    <li className="header">Calendar</li>
-    <li>
-      <a href="/dashboard/calendar">
-        <i className="fa fa-users" aria-hidden="true"></i> Appointments
-      </a>
-    </li>
-    <li className="header">Inventory</li>
-    <li>
-      <a href="/dashboard/inventory">
-        <i className="fa fa-home" aria-hidden="true"></i> Products
-      </a>
-    </li>
-    <li className="header">User</li>
-    <li>
-      <a href="/dashboard/my-profile">
-        <i className="fa fa-home" aria-hidden="true"></i> My Profile
-      </a>
-    </li>
-    <li onClick={()=>onLogout()}>
-      <a href="/">
-        <i className="fa fa-info-circle" aria-hidden="true"></i> Logout
-      </a>
-    </li>
-  </ul>
 </div>
-</section>
 )
 
 export default SideBar
-
-{/* <div classNameName="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{width: 280,height:'100vh'}}>
-<a href="/" classNameName="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-  <Bootstrap/>
-  <span classNameName="fs-4">Iron Projects</span>
-</a>
-<hr/>
-<ul classNameName="nav nav-pills flex-column mb-auto">
-
-  <li>
-    <a href="/dashboard" classNameName="nav-link text-white">
-        <Bootstrap classNameName='bi me-2'/>
-        Home
-    </a>
-  </li>
-  <li>
-    <a href="/dashboard/clients" classNameName="nav-link text-white">
-        <Bootstrap classNameName='bi me-2'/>
-        Clients
-    </a>
-  </li>
-  <li>
-    <a href="http" classNameName="nav-link text-white">
-        <Bootstrap classNameName='bi me-2'/>
-      Calendar
-    </a>
-  </li>
-  {user.role === 'ADMIN' && <li>
-    <a href="http" classNameName="nav-link text-white">
-      <Bootstrap classNameName='bi me-2'/>
-      Crear curso
-    </a>
-  </li>}
-
-  <li onClick={()=>onLogout()}>
-    <span classNameName="nav-link text-white">
-        <Bootstrap classNameName='bi me-2'/>
-      Logout
-    </span>
-  </li>
-</ul>
-<hr/>
-<div classNameName="dropdown">
-  <a href="http" classNameName="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-    <img src="https://github.com/mdo.png" alt="" width="32" height="32" classNameName="rounded-circle me-2"/>
-    <strong>{user.name}</strong>
-
-  </a>
-  <ul classNameName="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-    <li><a classNameName="dropdown-item" href="http">New project...</a></li>
-    <li><a classNameName="dropdown-item" href="http">Settings</a></li>
-    <li><a classNameName="dropdown-item" href="http">Profile</a></li>
-    <li><hr classNameName="dropdown-divider"/></li>
-    <li><a classNameName="dropdown-item" href="http">Sign out</a></li>
-  </ul>
-</div>
-</div> */}

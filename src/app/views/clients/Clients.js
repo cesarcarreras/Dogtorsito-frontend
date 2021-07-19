@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { ClientList } from '../../components';
 import ClientInfo from '../../../clients.json'
+import { UserList } from '../../components';
 
 
 class Clients extends Component{
@@ -11,7 +11,7 @@ class Clients extends Component{
         const {client_list} = this.state
         return(
             <section>
-               <ClientList clients={client_list}/>
+               <UserList clients={client_list}/>
            </section>
         )
     }
