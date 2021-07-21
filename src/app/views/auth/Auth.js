@@ -20,6 +20,7 @@ export default class Auth  extends Component{
         const {match,history} = this.props
         const {user} = this.state
         e.preventDefault()
+        console.log("log de user", user)
         const alreadyLoggedIn = () => match.path === "/signup" ? signupEndpoint(user) : loginEndpoint(user);
         alreadyLoggedIn()
             .then(res=>{

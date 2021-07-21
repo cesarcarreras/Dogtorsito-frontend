@@ -63,7 +63,7 @@ class Calendar extends Component {
       <div className="background">
        <div className="title"> <h1>Appointments</h1></div>
       <div className='calendar'>
-      <FullCalendar 
+      <FullCalendar
       events={events}
         plugins={[ dayGridPlugin, interactionPlugin ]}
         //dateClick={this.handleDateClick}
