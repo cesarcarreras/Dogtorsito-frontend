@@ -2,11 +2,7 @@ import React ,{Component} from 'react'
 import './style.css'
 
 import { TextInput,Button } from '..';
-<<<<<<< HEAD:src/app/components/CreatePetRecord/CreatePetProfile.js
-import { Label,Input} from 'reactstrap';
-=======
 import { Label, Input } from 'reactstrap';
->>>>>>> a640573ef6609c9c9f909f7b99551c710f1a4184:src/app/components/CreatePetProfile/CreatePetProfile.js
 import {usersListEndpoint} from '../../services/user-ws'
 
 import { profileCreateEndpoint, profileListEndpoint} from '../../services/profile-event-ws';
@@ -105,38 +101,38 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
                       </Input>
                       <TextInput
                                 name='name'
-                                placeholder='Pets name'
+                                placeholder='Nombre de la mascota'
                                 handleChange={handleChange}
                             />
                            <TextInput
                             name='age'
-                            placeholder='Pets age'
+                            placeholder='Edad de la mascota'
                             handleChange={handleChange}
                         />
                         <TextInput
                             name='breed'
-                            placeholder='Pets breed'
+                            placeholder='Raza'
                             handleChange={handleChange}
                         />
                         <TextInput
                             name='gender'
-                            placeholder='Pets gender'
+                            placeholder='Genero de la mascota'
                             handleChange={handleChange}
                         />
                     <TextInput
                             name='weight'
-                            placeholder='Pets weight'
+                            placeholder='Peso'
                             handleChange={handleChange}
                         />
 
                       <TextInput
                             name='owneremail'
-                            placeholder='Owners email'
+                            placeholder='E-mail del propietario'
                             handleChange={handleChange}
                         />
                         <TextInput
                             name='description'
-                            placeholder='Pets history'
+                            placeholder='Historial de la mascota'
                             handleChange={handleChange}
                         />
 

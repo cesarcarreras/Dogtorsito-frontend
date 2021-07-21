@@ -10,7 +10,16 @@ import { TextInput,Button } from '../../components';
 import { ButtonGroup,Label,Input } from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 import { calendarListEndpoint ,calendarCreateEndpoint,calendarUpdateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
-import moment from 'moment';
+
+
+function renderEventContent(eventInfo) {
+  return (
+    <>
+      <b>{eventInfo.timeText}</b>
+      <i>{eventInfo.event.title}</i>
+    </>
+  )
+}
 class Calendar extends Component {
   state = {
     events:[],
@@ -41,10 +50,6 @@ class Calendar extends Component {
     //Destructuramos
     let {appointment} = this.state
     let {name, value} = e.target
-<<<<<<< HEAD
-    
-=======
->>>>>>> a640573ef6609c9c9f909f7b99551c710f1a4184
     if (name === 'start' || name == "end"){
       value = moment(value).add(2,"hours")
     }
@@ -83,12 +88,12 @@ console.log(res)
 }
 
 handleEventClick = (clickInfo) => {
-  /*if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+  if (window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
     clickInfo.event.remove()
-  }*/
+  }
   //to do: abrir modal, preguntar para borrar, y confirmar ejecuta clickInfo.event.remove()
-  console.log(clickInfo.event.extendedProps._id)
-  clickInfo.event.remove()
+  /*console.log(clickInfo.event.extendedProps._id)
+  clickInfo.event.remove()*/
   
 }
   
@@ -131,6 +136,7 @@ handleEventClick = (clickInfo) => {
        <div className="title"> <h1>Appointments</h1></div>
        <div className="calendarForm">
       <div className="calendar">
+
       <FullCalendar
       events={events}
       plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -147,7 +153,7 @@ handleEventClick = (clickInfo) => {
       weekends={this.state.weekendsVisible}
       initialEvents={events} // alternatively, use the `events` setting to fetch from a feed
       select={this.handleDateSelect}
-      //eventContent={renderEventContent} // custom render function
+      eventContent={renderEventContent} 
       eventClick={this.handleEventClick}
       //eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
       eventChange={function(){}}
@@ -226,13 +232,8 @@ handleEventClick = (clickInfo) => {
       
     )
   }
-  
 
-  
-
-  
 }
 
-
-
 export default Calendar;
+
