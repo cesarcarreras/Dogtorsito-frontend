@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './calendar.css'
 
 import FullCalendar, { formatDate } from '@fullcalendar/react'
+import moment from 'moment'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
@@ -20,7 +21,6 @@ class Calendar extends Component {
   componentDidMount(){//primero va el componentDidMount
     calendarListEndpoint()
     .then(res=>{
-      
       this.setState({events:res.data.result})
     })
     .catch(error=>{
@@ -29,7 +29,6 @@ class Calendar extends Component {
 
     usersListEndpoint()
     .then(res=>{
-      
       this.setState({listUser:res.data.result})
     })
     .catch(error=>{
@@ -42,7 +41,10 @@ class Calendar extends Component {
     //Destructuramos
     let {appointment} = this.state
     let {name, value} = e.target
+<<<<<<< HEAD
     
+=======
+>>>>>>> a640573ef6609c9c9f909f7b99551c710f1a4184
     if (name === 'start' || name == "end"){
       value = moment(value).add(2,"hours")
     }
@@ -52,12 +54,11 @@ class Calendar extends Component {
 
 handleSubmit=(e)=>{
   //Destructuramos
-  
   let {appointment,events} = this.state
-  
+
   e.preventDefault()
   calendarCreateEndpoint(appointment)
-  
+
   .then(res=>{
     events=[...events,res.data.result]
     this.setState({events})//modificamos el state con los eventos
@@ -130,7 +131,7 @@ handleEventClick = (clickInfo) => {
        <div className="title"> <h1>Appointments</h1></div>
        <div className="calendarForm">
       <div className="calendar">
-      <FullCalendar 
+      <FullCalendar
       events={events}
       plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
       headerToolbar={{
@@ -209,7 +210,6 @@ handleEventClick = (clickInfo) => {
                                 handleChange={handleChange}
                                 disabled={appointment.allDay ? true : false}
                                 //Colocamos condicion para deshabilitar la fecha final si la cita es de todo el dia 
-                                
                             />
 
                      </div>

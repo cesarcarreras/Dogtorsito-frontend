@@ -5,19 +5,21 @@ class ProductTable extends Component {
         var categories = this.getCategories();
         return (
             <div className="productTable">
-                <div className="products"><span>Cliente</span></div>
+                <div className="products"><span>Productos:</span></div>
                 {categories.map((category) => (
                     <div>
                         <div className="products">
-                            <div><span>{category}</span></div>
+                        <div><span>{category}</span></div>
                         </div>
                         <div>
                             {this.props.productArray.filter(product => product.category===category).map((product,index_product) => (
                                 <div>
                                     <ProductRow
+                                        key = {index_product}
                                         name={product.name}
                                         price={product.price}
-                                        stocked={product.stocked}
+                                        description={product.description}
+                                        stocked={product.stock}
                                     />
                                 </div>
                             ))}

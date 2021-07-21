@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './styles.css'
+import './dashboard.css'
 import {SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint } from  '../../services/auth-ws'
@@ -14,15 +14,13 @@ import { logoutEndpoint } from  '../../services/auth-ws'
     componentDidMount(){
         const {user} = this.state
         const {history} = this.props
-        //Object.keys({}) noss regresa un [key,key,key]
+        //Object.keys({}) nos regresa un [key,key,key]
         if(!Object.keys(user).length || user === undefined){
             history.push('/login')
         }
     }
 
-    onClickMenu = () => {
-
-    }
+    onClickMenu = () => {}
 
     onLogout=()=>{
         const {history} = this.props
@@ -35,17 +33,21 @@ import { logoutEndpoint } from  '../../services/auth-ws'
             console.log("console error",error)
         })
     }
+
     render(){
        const {user} = this.state
        const {onLogout} = this
         return(
-            <div className="row-app">
+         <section>
+            <div className="dashboard">
                 <SideBar
                     user={user}
                     onLogout={onLogout}
                 />
                 <SubRoutes/>
             </div>
+
+        </section>
         )
     }
 }
