@@ -2,7 +2,7 @@ import React ,{Component} from 'react'
 import './style.css'
 
 import { TextInput,Button } from '..';
-import { Label,Input, BreadcrumbItem } from 'reactstrap';
+import { Label,Input} from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 
 import { profileCreateEndpoint, profileListEndpoint} from '../../services/profile-event-ws';
@@ -82,9 +82,9 @@ class PetProfile extends Component {//creamos componente para el formulario
     return (
 <div>
 <section className="auth-container">
-      <div className="container " id="container">
+      <div className="card " id="container">
         
-        <div className="createApp form-container sign-in-container">
+        <div className="form-container sign-in-container">
             <form onSubmit={handleSubmit}>
                 <h2 className="h1-form">Pet's information</h2>
                 <div className="container-fields input-sm ">

@@ -9,7 +9,7 @@ import { TextInput,Button } from '../../components';
 import { ButtonGroup,Label,Input } from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 import { calendarListEndpoint ,calendarCreateEndpoint,calendarUpdateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
-
+import moment from 'moment';
 class Calendar extends Component {
   state = {
     events:[],
@@ -41,7 +41,11 @@ class Calendar extends Component {
   handleChange=(e)=>{
     //Destructuramos
     let {appointment} = this.state
-    const {name, value} = e.target
+    let {name, value} = e.target
+    
+    if (name === 'start' || name == "end"){
+      value = moment(value).add(2,"hours")
+    }
     appointment[name]= value
     this.setState({ appointment })
 }
@@ -141,7 +145,7 @@ handleEventClick = (clickInfo) => {
       dayMaxEvents={true}
       weekends={this.state.weekendsVisible}
       initialEvents={events} // alternatively, use the `events` setting to fetch from a feed
-      //select={this.handleDateSelect}
+      select={this.handleDateSelect}
       //eventContent={renderEventContent} // custom render function
       eventClick={this.handleEventClick}
       //eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
