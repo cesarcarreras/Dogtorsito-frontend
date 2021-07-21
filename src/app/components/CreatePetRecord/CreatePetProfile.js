@@ -1,7 +1,7 @@
 import React ,{Component} from 'react'
 import './style.css'
 
-import { TextInput,Button } from '../../components';
+import { TextInput,Button } from '..';
 import { Label,Input, BreadcrumbItem } from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 

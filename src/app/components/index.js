@@ -11,4 +11,4 @@ export {default as Footer} from './Footer';
 export {default as HomeIcons} from './HomeIcons';
 export {default as Inventory} from './Inventory';
 export {default as ClientList} from './ClientList/ClientList'
-export {default as PetProfile} from './PetRecord/PetProfile'
+export {default as CreatePetProfile} from './CreatePetRecord/CreatePetProfile'
