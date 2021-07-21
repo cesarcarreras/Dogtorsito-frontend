@@ -5,7 +5,7 @@ import PetCard from './petcard';
 import './style.css';
 
 
-class PetsProfile extends Component  {
+class InfoProfile extends Component  {
 
     state = {
       profiles:undefined,
@@ -58,4 +58,4 @@ return (
   }
 }
 
-export default PetsProfile;
+export default InfoProfile ;
