@@ -1,7 +1,7 @@
 import React from 'react';
-const ProductRow = ({name,price,stocked}) => (
+const ProductRow = ({name,price,stock,productName}) => (
     <div className="product">
-        <span style={{color: stocked ? 'red' : 'black'}}>{name} </span><span>{price}</span>
+        <span>{name} </span><span>{price}</span><span>{stock}</span><span>{productName}</span>
     </div>
 )
 export default ProductRow;

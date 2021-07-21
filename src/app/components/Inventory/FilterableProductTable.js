@@ -9,6 +9,7 @@ class FilterableProductTable extends Component {
             filteredArr: []
         }
     }
+    //Tomo la data del backend
     componentDidMount(){
         inventoryListEndpoint()
         .then(data => {

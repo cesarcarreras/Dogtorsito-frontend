@@ -9,7 +9,7 @@ class ProductTable extends Component {
                 {categories.map((category) => (
                     <div>
                         <div className="products">
-                            <div><span>{category}</span></div>
+                        <div><span>{category}</span></div>
                         </div>
                         <div>
                             {this.props.productArray.filter(product => product.category===category).map((product,index_product) => (
@@ -17,7 +17,7 @@ class ProductTable extends Component {
                                     <ProductRow
                                         name={product.name}
                                         price={product.price}
-                                        stocked={product.stocked}
+                                        stocked={product.stock}
                                     />
                                 </div>
                             ))}
