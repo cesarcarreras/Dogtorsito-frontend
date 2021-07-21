@@ -1,0 +1,40 @@
+.t{
+	position: relative;
+	border-radius:50%;
+  }
+  .card-users{
+	margin: auto;
+	padding: 10px;
+	width: 200px;
+	height: 240px;
+	background-color: #34CB9B;
+	box-shadow:0 1rem 3rem rgba(0,0,0,.175);
+	border-radius: 25px;
+	color: #fff;
+  }
+  .paragarph-center{
+	text-align: center;
+  }
+  .circle-photo-card{
+	box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+	margin: -100px 0px 0px 110px;
+	padding: 10px;
+	width: 80px;
+	height: 80px;
+	border-radius:100%;
+	border:2px solid white;
+	position: relative;
+  }
+  .title-card{
+	margin-top: 20px;
+  }
+
+  .ps{
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+  }
+  .control-ps{
+	position: relative;
+  }
+

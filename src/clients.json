@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "Cesar",
+        "email" : "cesarcarreras95@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "petName" : "Moka",
+        "breed" : "Labrador",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
+        "status" : "Active",
+        "signup" : "12-12-2020"
+    },
+    {
+        "name" : "Mauricio",
+        "email" : "mau@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "petName" : "Manchas",
+        "breed" : "Siames",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
+        "status" : "Active",
+        "signup" : "12-20-2019"
+    },
+    {
+        "name" : "Esau",
+        "email" : "esau@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "petName" : "Bobby",
+        "breed" : "Ancient",
+        "created" : "2021-07-10",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
+        "status" : "Active"
+    },
+    {
+        "name" : "Paola",
+        "email" : "cesarcarreras95@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "petName" : "Valentina",
+        "breed" : "Labrador",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
+        "status" : "Unactive"
+    },
+    {
+        "name" : "Mario",
+        "email" : "cesarcarreras95@gmail.com",
+        "image" : "https://i.blogs.es/ab74c7/fotografo-de-perros_-santos-roman-piccolo-italiano/450_1000.jpg",
+        "petName" : "Chiquita",
+        "breed" : "Labrador",
+        "shots" : ["Rabia", "Moquillo", "Cuadruple", "Quintuple", "Refuerzo moquillo"],
+        "status" : "Unactive"
+    }
+]
