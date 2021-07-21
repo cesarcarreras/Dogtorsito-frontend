@@ -11,14 +11,14 @@ const SubRoutes = () =>  (
         {/* ADMIN */}
         <Route  path="/dashboard/clients" component={Clients} />
         <Route  path="/dashboard/clients/update-client" component={()=><h1>En esta web se edita el client</h1>} />
-        <Route  path="/dashboard/appointments" component={()=><h1>Aquí podremos ver las citas</h1>} />
+        <Route  path="/dashboard/appointments" component={()=><h1>Aqui podremos ver las citas</h1>} />
         <Route  path="/dashboard/inventory" component={Inventory} />
         <Route  path="/dashboard/calendar" component={Calendar} />
         <Route  path='/dashboard/my-profile' component={PetsProfile}/>
 
         {/*USER  */}
         <Route  path="/dashboard/my-profile" component={Calendar} />
-        <Route  path="/dashboard" component={()=><h1>Esta es la página principal del usuario</h1>} />
+        <Route  path="/dashboard" component={()=><h1>Esta es la pagina principal del usuario</h1>} />
     </Switch>
 )
 

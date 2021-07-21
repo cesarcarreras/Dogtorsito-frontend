@@ -1,11 +1,11 @@
 import './sidebar.css'
 
-import userIcon from '../../assets/images/user.png';
-import invIcon from '../../assets/images/inventory.png';
-import apoIcon from '../../assets/images/calendar.png';
-import histIcon from '../../assets/images/hospital.png';
-import homIcon from '../../assets/images/home.png'
-import logIcon from '../../assets/images/logout.png'
+import homIcon from '../../assets/images/home-white.png';
+import clienIcon from '../../assets/images/clientes.png';
+import apoIcon from '../../assets/images/citas.png';
+import invIcon from '../../assets/images/inventario.png';
+import userIcon from '../../assets/images/perfil.png';
+import logIcon from '../../assets/images/logout-white.png';
 
 const SideBar = ({user,onLogout}) => (
   <div className="main-app">
@@ -26,9 +26,9 @@ const SideBar = ({user,onLogout}) => (
           <a href="/dashboard/clients" className="menu-a">
             <div className="menu-txt-hld">
               <i className="fas menu-icon">
-              <img src={histIcon} width="40px" alt="Hospital Icon"/>
+              <img src={clienIcon} width="40px" alt="Hospital Icon"/>
               </i>
-              <span className="menu-txt">Clients</span>
+              <span className="menu-txt">Clientes</span>
             </div>
           </a>
         </li>
@@ -58,7 +58,7 @@ const SideBar = ({user,onLogout}) => (
             <i className="fas menu-icon">
               <img src={userIcon} width="40px" alt="User Icon"/>
               </i>
-              <span className="menu-txt">{user.name}</span>
+              <span className="menu-txt">Mi perfil</span>
             </div>
           </a>
         </li>

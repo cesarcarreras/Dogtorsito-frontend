@@ -53,7 +53,6 @@ const CardServices = () => (
               <p className="description">Con nuestra aplicacion las tareas de agendar citas sera mucho mas sencilla</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@
     background-color: #F5A503 ;
     background-image: url("../../assets/images/dog-background.png");
     background-repeat: no-repeat;
+    background-position: 5%;
     height: 100vh;
     width: 100vw;
     display: flex;

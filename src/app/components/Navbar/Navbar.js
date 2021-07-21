@@ -12,7 +12,6 @@ const Navbar = () =>  (
             <li><a className="nav-link" href="/">Inicio</a></li>
             <li><a className="nav-link" href="#about">Nosotros</a></li>
             <li><a className="nav-link" href="#services">Servicios</a></li>
-            <li><a className="nav-link" href="#clients">Clientes</a></li>
             <li><a className="nav-link" href="#team">Equipo</a></li>
             <li><a className="nav-link" href="#contact">Contacto</a></li>
             <li><a className="getstarted" href="/signup">¡Comencemos!</a></li>
