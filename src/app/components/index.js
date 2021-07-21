@@ -6,8 +6,9 @@ export {default as Navbar} from './Navbar/Navbar';
 export {default as Footer} from './Footer/Footer';
 export {default as Inventory} from './Inventory/FilterableProductTable';
 export {default as UserList} from './UserList/UserList'
-export {default as PetProfile} from './PetProfile/PetProfile'
+export {default as CreatePetProfile} from './CreatePetProfile/CreatePetProfile'
 export {default as Cover} from './Cover/Cover'
 export {default as About} from './About/About'
 export {default as CardServices} from './CardServices/CardServices'
 export {default as Team} from './Team/Team'
+export {default as PetCard} from './PetCard/PetCard'
