@@ -23,6 +23,7 @@
 .h1-form {
     font-weight: bold;
 	margin-top: 25px;
+    margin-right: 95px;
 }
 
 .p-form {
@@ -40,13 +41,13 @@
     margin: 15px 0;
 }
 
-.container {
+.container-form {
     background: #fff;
     border-radius: 30px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
     position: relative;
     overflow: hidden;
-    width: 500px !important;
+    width: 550px;
     min-height: 600px;
 }
 
@@ -82,7 +83,7 @@ button:active {
 }
 
 .sign-in-container {
-    margin-left: 110px;
+    margin-left: 140px;
 }
 
 .sign-up-container {

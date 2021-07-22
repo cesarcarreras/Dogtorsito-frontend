@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './dashboard.css'
-import {SideBar} from '../../components'
+import { SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint } from  '../../services/auth-ws'
  class Dashboard extends Component{
@@ -44,9 +44,8 @@ import { logoutEndpoint } from  '../../services/auth-ws'
                     user={user}
                     onLogout={onLogout}
                 />
-                <SubRoutes/>
+                 <SubRoutes/>
             </div>
-
         </section>
         )
     }

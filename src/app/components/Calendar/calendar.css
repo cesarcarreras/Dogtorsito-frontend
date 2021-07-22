@@ -1,13 +1,30 @@
+h1{
+    margin-left: 20%;
+}
+
 .calendar {
-    width: 100%;
+    width: 80%;
     height: 100%;
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
     background-color: white;
 }
 
-.background {
-    background-color: #025E73 ;
-    
-}   
+.create-button{
+    margin-left: 20%;
+}
+
+.background-calendar {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    border: 1px solid #6FA6A6;
+    border-radius: 100px;
+    box-shadow: 5px 5px 30px 5px rgba(0, 0, 0,0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
 
 .title {
     padding: 2%;
@@ -15,22 +32,23 @@
     background: linear-gradient(to right, #D9D8C7, #6FA6A6) no-repeat 0 0 / cover;
 }
 
-.calendarForm {
-    display: flex;
-    flex-direction: row;
-    
-}
+
 .form-container {
     top: 0;
-    height: 100%;
+    height: 80%;
     transition: all .6s ease-in-out;
 }
 
-
 .createApp {
+        margin-left: 30%;
+}
 
-margin-left: 25%;
+.cal-container{
+    height: 80vh;
+    margin-left: -30px;
+    margin-right: 20px;
+}
 
-
-
+.h1-form-cal{
+    margin-top: 45px;
 }
