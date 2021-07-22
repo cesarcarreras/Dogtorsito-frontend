@@ -135,7 +135,7 @@ handleEventClick = (clickInfo) => {
               //eventContent={renderEventContent} // custom render function
               eventClick={this.handleEventClick}
               //eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
-              eventChange={function(){}}
+              eventChange={(eventId)=>this.handleChangeEvent(eventId)}
               eventRemove={(eventId)=>this.handleDeleteEvent(eventId)}
               select
               />

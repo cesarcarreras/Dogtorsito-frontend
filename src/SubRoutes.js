@@ -6,6 +6,7 @@ import Calendar from './app/components/Calendar/Calendar';
 import Inventory from './app/views/inventory/inventory';
 import CreatePetProfile from './app/components/CreatePetProfile/CreatePetProfile'
 import HomeDashboard from './app/views/home-dashboard/HomeDashboard.js';
+import { CoverClientCreated, CoverDateCreated } from './app/components/index.js';
 
 const SubRoutes = () =>  (
     <Switch>
@@ -16,6 +17,8 @@ const SubRoutes = () =>  (
         <Route  path="/dashboard/inventory" component={Inventory} />
         <Route  path="/dashboard/calendar" component={Calendar} />
         <Route  path="/dashboard/my-profile" component={InfoProfile} />
+        <Route path="/dashboard/datecreated" component={CoverDateCreated}/>
+        <Route path="/dashboard/clientcreated" component={CoverClientCreated}/>
     </Switch>
 )
 

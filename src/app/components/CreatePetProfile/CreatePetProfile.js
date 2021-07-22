@@ -137,7 +137,8 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
                         />
 
                      </div>
-                        <Button text={'Crear perfil de mascota'}/>
+                     <a href="/dashboard/clientcreated" className="btn-get-started"><Button text={'Crear perfil de mascota'}/></a>
+                         
             </form>
         </div>
     </div>

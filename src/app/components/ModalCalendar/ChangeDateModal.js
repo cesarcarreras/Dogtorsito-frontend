@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalBody} from 'reactstrap';
-import CreateAppointment from '../Calendar/CreateAppointment';
+import ChangeAppointment from '../Calendar/ChangeAppointment';
 
-const ModalCreateAppointment = (props) => {
+
+const ModalChangeAppointment = (props) => {
   const {
     buttonLabel,
     className
@@ -17,7 +18,7 @@ const ModalCreateAppointment = (props) => {
       <Button color="primary" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalBody>
-        <CreateAppointment/>
+        <ChangeAppointment/>
         </ModalBody>
         
       </Modal>
@@ -25,4 +26,4 @@ const ModalCreateAppointment = (props) => {
   );
 }
 
-export default ModalCreateAppointment;
+export default ModalChangeAppointment;

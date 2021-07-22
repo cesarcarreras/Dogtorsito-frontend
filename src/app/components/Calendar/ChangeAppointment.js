@@ -4,21 +4,18 @@ import Button from '../Button/Button'
 import TextInput from '../TexInput/TextInput'
 import moment from 'moment'
 import {usersListEndpoint} from '../../services/user-ws'
-import { calendarListEndpoint ,calendarCreateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
+import { calendarListEndpoint ,calendarDeleteEndpoint,calendarUpdateEndpoint } from '../../services/calendar-event-ws';
 import './calendar.css'
 import {Link} from 'react-router-dom';
 
 
-class CreateAppointment extends Component{
+class ChangeAppointment extends Component{
   state = {
     events:[],
     appointment:{allDay:false},
     listUser:[]
   };
 
- 
-
-  
   componentDidMount(){//primero va el componentDidMount
     calendarListEndpoint()
     .then(res=>{
@@ -54,7 +51,7 @@ handleSubmit=(e)=>{
   let {appointment,events} = this.state
 
   e.preventDefault()
-  calendarCreateEndpoint(appointment)
+  calendarUpdateEndpoint(appointment)
 
   .then(res=>{
     events=[...events,res.data.result]
@@ -103,7 +100,7 @@ handleEventClick = (clickInfo) => {
             <div className="cal-container">
               <div className="createApp form-container sign-in-container">
                   <form onSubmit={handleSubmit}>
-                      <h2 className="h1-form-cal">Registrar Cita</h2>
+                      <h2 className="h1-form-cal">Modificar Cita</h2>
                       <div className="container-fields input-sm">
                           <Input
                           type="select" name="_patient" id="exampleSelect"
@@ -150,9 +147,10 @@ handleEventClick = (clickInfo) => {
                                       />
 
                            </div>
-                           
-                              <Button text={'Crear Cita'}/>
-                           
+                           <Link to="/dashboard/datecreated">
+                              <Button text={'Modificar cita'}/>
+                              <Button text={'Eliminar cita'}/>
+                           </Link>
                   </form>
               </div>
           </div>
@@ -161,4 +159,4 @@ handleEventClick = (clickInfo) => {
     }
 }
 
-export default CreateAppointment
+export default ChangeAppointment;
