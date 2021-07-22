@@ -1,26 +1,27 @@
-
 import React, {Component} from 'react';
+import './styles.css'
 
 class PetCard extends Component {
 
     render (){
-
-        let profile=this.props.item
-        console.log(this.props)
+        let profile = this.props.item
         return (
-            <div>
-             <img src={profile.picture} alt={profile.name}></img>
-                <div>
-                    <p><b>Pet's name: </b>{profile.name}</p>
-                    <p><b>Pet's age: </b>{profile.age}</p>
-                    <p><b>Gender: </b>{profile.gender}</p>
-                    <p><b>Breed: </b>{profile.breed}</p>
-                    <p><b>Weight: </b>{profile.weight}</p>
-                    <p><b>Owner: </b>{profile.name}</p>
-                    <p><b>Owner's email: </b>{profile.owneremail}</p>
-                    <p><b>Health report: </b>{profile.description}</p>
-                </div>
-            </div>
+            <section className="cards-clients">
+                    <div class="container-client-card">
+                        <div class="clients-card">
+                            <div class="face face1">
+                                <div class="content-cards-clients">
+                                       <img src={profile.image} className="profile-pic-cards" alt="Pet Profile Pic"/>
+                                </div>
+                            </div>
+                            <div class="face face2">
+                                <div class="content">
+                                    <p>This is where I network and build my professional protfolio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
         )
     }
 }
