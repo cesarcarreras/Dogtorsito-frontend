@@ -94,9 +94,9 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
                             </option>))}
                       </Input>
                       <TextInput
-                                name='name'
-                                placeholder='Nombre de la mascota'
-                                handleChange={handleChange}
+                            name='name'
+                            placeholder='Nombre de la mascota'
+                            handleChange={handleChange}
                             />
                            <TextInput
                             name='age'
@@ -118,21 +118,13 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
                             placeholder='Peso'
                             handleChange={handleChange}
                         />
-
-                      <TextInput
-                            name='owneremail'
-                            placeholder='E-mail del propietario'
-                            handleChange={handleChange}
-                        />
                         <TextInput
                             name='description'
                             placeholder='Historial de la mascota'
                             handleChange={handleChange}
                         />
-
                      </div>
                      <Button text={'Crear perfil de mascota'}/>
-                         
             </form>
         </div>
     </div>

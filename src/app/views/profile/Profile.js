@@ -3,7 +3,7 @@ import ClientInfo from '../../../clients.json'
 import { UserList } from '../../components';
 
 
-class Clients extends Component{
+class Profile extends Component{
   state = {
      client_list: ClientInfo
   }
@@ -17,4 +17,4 @@ class Clients extends Component{
     }
 }
 
-export default Clients;
+export default Profile;

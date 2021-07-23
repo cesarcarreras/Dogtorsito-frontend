@@ -40,11 +40,11 @@ const SideBar = ({user, onLogout}) => (
               </a>
             </li>
             <li>
-              <a href="/dashboard/clients" >
+              <a href="/dashboard/pets" >
                 <span className="icon-sidebar"><i className="fas fa-chart-pie">
                 <img src={clienIcon} width="30px" alt="Clients Icon"/>
                 </i></span>
-                <span className="list">Clientes</span>
+                <span className="list">Mascotas</span>
               </a>
             </li>
             <li>

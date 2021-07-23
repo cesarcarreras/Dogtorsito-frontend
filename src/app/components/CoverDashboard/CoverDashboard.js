@@ -9,8 +9,8 @@ const CoverDashboard = ({user}) => (
           <h1>¡Hola, {user.name}!</h1>
           <h2>¿Qué te gustaría hacer primero?</h2>
           <div>
-            <a href="/dashboard/create-client" className="btn-get-started">Crear Cliente</a>
-            <a href="/signup" className="btn-get-started">Agendar Cita</a>
+            <a href="/dashboard/create-pet" className="btn-get-started">Crear mascota</a>
+            <a href="/dashboard/calendar" className="btn-get-started">Agendar cita</a>
           </div>
         </div>
         <div className="col-lg-6 order-lg-2 ">
