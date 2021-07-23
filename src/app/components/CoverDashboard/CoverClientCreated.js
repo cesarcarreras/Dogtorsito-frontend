@@ -7,10 +7,10 @@ const CoverClientCreated = () => (
     <div className="cover-dashboard-container">
       <div className="row gy-4">
         <div className="col-lg-6 d-flex flex-column justify-content-center">
-        <h1>¡Cliente creado con exito!</h1>
+        <h1>¡Mascota creado con exito!</h1>
           <div>
-            <a href="/dashboard/create-client" className="btn-get-started">Crear Cliente</a>
-            <a href="/dashboard/calendar" className="btn-get-started">Agendar Cita</a>
+            <a href="/dashboard/create-pet" className="btn-get-started">Crear Mascota</a>
+            <a href="/dashboard/pets" className="btn-get-started">Ver Mascotas</a>
           </div>
         </div>
         <div className="col-lg-6 order-lg-2 ">

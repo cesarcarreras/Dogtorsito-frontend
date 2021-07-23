@@ -24,7 +24,6 @@ export default class Auth  extends Component{
         const alreadyLoggedIn = () => match.path === "/signup" ? signupEndpoint(user) : loginEndpoint(user);
         alreadyLoggedIn()
             .then(res=>{
-                
                 localStorage.setItem( "user",JSON.stringify(res.data.result) )
                 history.push('/dashboard/home')
             })
