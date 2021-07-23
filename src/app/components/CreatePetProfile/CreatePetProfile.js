@@ -28,13 +28,11 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
     componentDidMount(){//primero va el componentDidMount
         profileListEndpoint()
         .then(res=>{
-          
           this.setState({profiles:res.data.result})
         })
         .catch(error=>{
           console.log(error)
         })
-    
         usersListEndpoint()
         .then(res=>{
           
@@ -55,18 +53,13 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
 
     handleSubmit=(e)=>{
         //Destructuramos
-        
         let {profile} = this.state
-        
         e.preventDefault()
-        
         profileCreateEndpoint(profile)
-        
         .then(res=>{
           console.log(res)
           /*profiles=[...profiles,res.data.result]
           this.setState({profiles})*///modificamos el state con los perfiless
-      
       })
       .catch(error =>{
           console.log("error",error.response)
@@ -83,13 +76,12 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
 <div>
 <section className="auth-container">
       <div className="container " id="container">
-        
         <div className="createApp form-container sign-in-container">
             <form onSubmit={handleSubmit}>
                 <h2 className="h1-form">Pet's information</h2>
                 <div className="container-fields input-sm ">
                 <Label for="exampleSelect">Select client</Label>
-                    <Input 
+                    <Input
                     type="select" name="_patient" id="exampleSelect" 
                     onChange={handleChange}>
                       <option value={0}>Pick a client</option> 

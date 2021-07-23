@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import { ButtonGroup, Input, Label } from 'reactstrap'
+import { ButtonGroup, Input } from 'reactstrap'
 import Button from '../Button/Button'
 import TextInput from '../TexInput/TextInput'
 import moment from 'moment'
@@ -37,7 +37,7 @@ class CreateAppointment extends Component{
     //Destructuramos
     let {appointment} = this.state
     let {name, value} = e.target
-    if (name === 'start' || name == "end"){
+    if (name === 'start' || name === "end"){
       value = moment(value).add(2,"hours")
     }
     appointment[name]= value

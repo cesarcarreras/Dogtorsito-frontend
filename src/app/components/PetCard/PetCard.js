@@ -16,7 +16,7 @@ class PetCard extends Component {
                             </div>
                             <div class="face face2">
                                 <div class="content">
-                                    <p>This is where I network and build my professional protfolio.</p>
+                                    <p>{profile.name}</p>
                                 </div>
                             </div>
                         </div>
