@@ -6,8 +6,6 @@ import moment from 'moment'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import { TextInput,Button } from '../../components';
-import { ButtonGroup,Label,Input } from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 import { calendarListEndpoint ,calendarCreateEndpoint,calendarUpdateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
 import ModalCreateAppointment from '../ModalCalendar/ModalCalendar';
@@ -20,7 +18,6 @@ function renderEventContent(eventInfo) {
     </>
   )
 }
-
 class Calendar extends Component {
   state = {
     events:[],
@@ -89,7 +86,7 @@ console.log(res)
 }
 
 handleEventClick = (clickInfo) => {
-  if (window.confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+  if (window.confirm(`Deseas borrar la cita seleccionada? '${clickInfo.event.title}'`)) {
     clickInfo.event.remove()
   }
 }
@@ -138,7 +135,7 @@ handleEventClick = (clickInfo) => {
               //eventContent={renderEventContent} // custom render function
               eventClick={this.handleEventClick}
               //eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
-              eventChange={function(){}}
+              eventChange={(eventId)=>this.handleChangeEvent(eventId)}
               eventRemove={(eventId)=>this.handleDeleteEvent(eventId)}
               select
               />
@@ -150,6 +147,5 @@ handleEventClick = (clickInfo) => {
   }
 }
 
-
-
 export default Calendar;
+

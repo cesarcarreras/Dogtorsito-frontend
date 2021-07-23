@@ -16,7 +16,11 @@ class PetCard extends Component {
                             </div>
                             <div class="face face2">
                                 <div class="content">
-                                    <p>{profile.name}</p>
+                                    <h3>{profile.name}</h3>
+                                    <p>{profile.age}</p>
+                                    <p>{profile.breed}</p>
+                                    <p>{profile.weight}</p>
+                                    <p>{profile.owneremail}</p>
                                 </div>
                             </div>
                         </div>
