@@ -55,7 +55,7 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
 
     handleSubmit=(e)=>{
         //Destructuramos
-        
+        const {history} = this.props
         let {profile} = this.state
         
         e.preventDefault()
@@ -64,6 +64,7 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
         
         .then(res=>{
           console.log(res)
+          history.push('/dashboard/clientcreated')
           /*profiles=[...profiles,res.data.result]
           this.setState({profiles})*///modificamos el state con los perfiless
       
@@ -137,7 +138,7 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
                         />
 
                      </div>
-                     <a href="/dashboard/clientcreated" className="btn-get-started"><Button text={'Crear perfil de mascota'}/></a>
+                     <Button text={'Crear perfil de mascota'}/>
                          
             </form>
         </div>

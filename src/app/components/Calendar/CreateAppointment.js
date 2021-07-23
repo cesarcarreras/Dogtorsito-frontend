@@ -6,7 +6,7 @@ import moment from 'moment'
 import {usersListEndpoint} from '../../services/user-ws'
 import { calendarListEndpoint ,calendarCreateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
 import './calendar.css'
-import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 
 class CreateAppointment extends Component{
@@ -51,18 +51,20 @@ class CreateAppointment extends Component{
 
 handleSubmit=(e)=>{
   //Destructuramos
+  const {history} = this.props
   let {appointment,events} = this.state
 
   e.preventDefault()
   calendarCreateEndpoint(appointment)
-
   .then(res=>{
     events=[...events,res.data.result]
     this.setState({events})//modificamos el state con los eventos
+    
+    history.push('/dashboard/datecreated')
 
 })
 .catch(error =>{
-    console.log("error",error.response)
+    console.log("error",error)
 })
 }
 
@@ -152,7 +154,7 @@ handleEventClick = (clickInfo) => {
                            </div>
                            
                               <Button text={'Crear Cita'}/>
-                           
+                              
                   </form>
               </div>
           </div>
@@ -161,4 +163,4 @@ handleEventClick = (clickInfo) => {
     }
 }
 
-export default CreateAppointment
+export default withRouter(CreateAppointment);//withRouter funciona para poder redirigir el boton.

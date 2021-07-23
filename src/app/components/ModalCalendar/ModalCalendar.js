@@ -17,7 +17,7 @@ const ModalCreateAppointment = (props) => {
       <Button color="primary" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalBody>
-        <CreateAppointment/>
+        <CreateAppointment {...props}/>
         </ModalBody>
         
       </Modal>
