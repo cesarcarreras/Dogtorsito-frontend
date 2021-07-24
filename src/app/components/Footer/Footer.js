@@ -79,7 +79,7 @@ const Footer = () => (
       &copy; Copyright <strong><span>Dogtorsito</span></strong>. All Rights Reserved
     </div>
     <div className="credits">
-      Designed by <a href="https://github.com/cesarcarreras/Dogtorsito">Cesar Carreras</a>
+      Designed by <a href="https://github.com/cesarcarreras/Dogtorsito">Cesar, Mauricio y Esau</a>
     </div>
   </div>
 </footer>

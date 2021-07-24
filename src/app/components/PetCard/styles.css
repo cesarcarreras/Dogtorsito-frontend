@@ -46,13 +46,15 @@
     width: 300px;
     height: 200px;
     transition: 0.5s;
+    border-radius: 20px;
 }
 
 .container-client-card .clients-card .face.face1 {
     position: relative;
-    background: #34CB9B;
+    background: #F5A503;
     display: flex;
     justify-content: center;
+    border-radius: 20px;
     align-items: center;
     z-index: 1;
     transform: translateY(100px);

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './home-dashboard.css'
 import {CoverDashboard, SideBar} from '../../components'
 import { logoutEndpoint } from  '../../services/auth-ws'
 

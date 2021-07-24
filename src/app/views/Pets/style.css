@@ -10,3 +10,14 @@
 	align-items: center;
 	align-content: space-around;
 }
+
+.btn-add-pet{
+	background: #F5A503;
+    color: #F9F8EA;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.5s;
+}

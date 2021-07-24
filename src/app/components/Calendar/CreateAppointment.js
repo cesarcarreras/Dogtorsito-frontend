@@ -144,11 +144,8 @@ handleEventClick = (clickInfo) => {
                                       handleChange={handleChange}
                                       disabled={appointment.allDay ? true : false}
                                       />
-
                            </div>
-                           
                               <Button text={'Crear Cita'}/>
-                              
                   </form>
               </div>
           </div>

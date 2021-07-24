@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './dashboard.css'
 import { SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint } from  '../../services/auth-ws'

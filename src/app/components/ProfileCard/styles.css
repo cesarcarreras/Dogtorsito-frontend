@@ -3,6 +3,9 @@
     margin-top: 10%;
 }
 
+.card-profile-picture{
+  border-radius: 50px;
+}
 
 .card-pc {
   width: 650px;
@@ -24,7 +27,7 @@
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#dE685E, #EE786E);
+  background: linear-gradient(#F2385A, #EE786E);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
@@ -96,7 +99,7 @@
 }
 
 .card-pc .additional-pc .coords {
-  margin: 0 1rem;
+  margin: .5rem 2rem;
   color: #fff;
   font-size: 1rem;
 }
@@ -149,19 +152,18 @@
   font-size: 2.5rem;
 }
 
-.card-pc .general {
+.card-pc .general-pc {
   width: 300px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
+  margin-right: 100px;
   box-sizing: border-box;
-  padding: 1rem;
   padding-top: 0;
 }
 
-.card-pc .general .more {
+.card-pc .general-pc .more {
   position: absolute;
   bottom: 1rem;
   right: 1rem;

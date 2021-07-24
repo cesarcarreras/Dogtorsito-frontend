@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './styles.css'
-
 class PetCard extends Component {
-
     render (){
         let profile = this.props.item
         return (
@@ -16,11 +14,11 @@ class PetCard extends Component {
                             </div>
                             <div class="face face2">
                                 <div class="content">
-                                    <h3>{profile.name}</h3>
-                                    <p>{profile.age}</p>
-                                    <p>{profile.breed}</p>
-                                    <p>{profile.weight}</p>
-                                    <p>{profile.owneremail}</p>
+                                    <h2>{profile.name}</h2>
+                                    <p>Edad: {profile.age}</p>
+                                    <p>Raza: {profile.breed}</p>
+                                    <p>Peso: {profile.weight}</p>
+                                    <p>Genero: {profile.gender}</p>
                                 </div>
                             </div>
                         </div>

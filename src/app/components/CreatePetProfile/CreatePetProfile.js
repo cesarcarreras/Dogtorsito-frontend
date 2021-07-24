@@ -2,7 +2,7 @@ import React ,{Component} from 'react'
 import './style.css'
 
 import { TextInput,Button } from '..';
-import { Label, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 
 import { profileCreateEndpoint, profileListEndpoint} from '../../services/profile-event-ws';
