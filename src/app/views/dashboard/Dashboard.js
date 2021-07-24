@@ -14,7 +14,6 @@ import { logoutEndpoint } from  '../../services/auth-ws'
     componentDidMount(){
         const {user} = this.state
         const {history} = this.props
-        //Object.keys({}) nos regresa un [key,key,key]
         if(!Object.keys(user).length || user === undefined){
             history.push('/login')
         }

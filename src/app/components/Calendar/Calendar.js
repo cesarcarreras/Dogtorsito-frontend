@@ -1,23 +1,15 @@
 import React, {Component} from 'react';
 import './calendar.css'
 
-import FullCalendar, { formatDate } from '@fullcalendar/react'
+import FullCalendar from '@fullcalendar/react'
 import moment from 'moment'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import {usersListEndpoint} from '../../services/user-ws'
-import { calendarListEndpoint ,calendarCreateEndpoint,calendarUpdateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
+import { calendarListEndpoint ,calendarCreateEndpoint,calendarDeleteEndpoint } from '../../services/calendar-event-ws';
 import ModalCreateAppointment from '../ModalCalendar/ModalCalendar';
 
-function renderEventContent(eventInfo) {
-  return (
-    <>
-      <b>{eventInfo.timeText}</b>
-      <i>{eventInfo.event.title}</i>
-    </>
-  )
-}
 class Calendar extends Component {
   state = {
     events:[],
@@ -43,7 +35,6 @@ class Calendar extends Component {
     })
   }
 
-
   handleChange=(e)=>{
     //Destructuramos
     let {appointment} = this.state
@@ -65,7 +56,6 @@ handleSubmit=(e)=>{
   .then(res=>{
     events=[...events,res.data.result]
     this.setState({events})//modificamos el state con los eventos
-
 })
 .catch(error =>{
     console.log("error",error.response)
@@ -100,9 +90,7 @@ handleEventClick = (clickInfo) => {
 
   //cambiar el return
           render(){
-            const {events,appointment,listUser} = this.state//Se destructura aqui
-                const {handleChange,handleSubmit,setAllDay} = this
-                const {match} = this.props
+            const {events} = this.state//Se destructura aqui
                 console.log("Listando usuarios",this.state.appointment)
                 console.log(this.state.events)
             return (

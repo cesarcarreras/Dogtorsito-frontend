@@ -16,9 +16,6 @@ class CreateAppointment extends Component{
     listUser:[]
   };
 
- 
-
-  
   componentDidMount(){//primero va el componentDidMount
     calendarListEndpoint()
     .then(res=>{
@@ -59,15 +56,12 @@ handleSubmit=(e)=>{
   .then(res=>{
     events=[...events,res.data.result]
     this.setState({events})//modificamos el state con los eventos
-    
     history.push('/dashboard/datecreated')
-
 })
 .catch(error =>{
     console.log("error",error)
 })
 }
-
 
 handleDeleteEvent=(clickInfo)=>{//funcion tomada del repo
 console.log("borrando la base",clickInfo.event.extendedProps._id)
