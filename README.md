@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Bienvenid@ a Dogtorsito - Welcome to Dogtorsito
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dogtorsito es una aplicación diseñada para facilitar la comunicación entre un veterinario y una persona que necesita una cita o servicio para su mascota.
 
-## Available Scripts
+El objetivo de Dogtorsito es facilitar el registro de citas, así como el inventario de productos y el historial de mascotas.
 
-In the project directory, you can run:
+## Desarrolladores:
 
-### `yarn start`
+Mauricio Muñoz, Cesar Carreras & Esau Acosta
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Prueba Dogtorsito](https://dogtorsito.herokuapp.com/)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Cuenta para probar el demo
 
-### `yarn build`
+- Usuario: cesar@gmail.com.\
+- Contraseña: 123
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tecnologías utilizadas
+-NodeJS.\
+-Express.\
+-MongoDB.\
+-JavaScript.\
+-HTML.\
+-CSS.\
+-Bootstrap
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dogtorsito
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Routes
+-/login.\
+-/signup.\
+-/dashboard.\
+-/dashboard/clients.\
+-/dashboard/home.\
+-/dashboard/clients/update-client.\
+-/dashboard/create-client.\
+-/dashboard/clientcreated.\
+-/dashboard/my-profile.\
+-/dashboard/calendar.\
+-/dashboard/datecreated.\
 
-### `yarn eject`
+## Paginas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Home
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-Login/Signup.\
+-Dashboard.\
+-Clientes.\
+-Calendario.\
+  -Crear cita.\
+  -Eliminar cita.\
+  -Calendario semanal.\
+-Crear pefil de mascota.\
+  -Revisar tarjeta de mascota.\
+-Inventario
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Componentes
+-Button.\
+-Calendar.\
+-CardServices.\
+-Cover.\
+-Dashboard.\
+-CreatePetProfile.\
+-Inventory.\
+-ModalCalendar.\
+-Navbar.\
+-PetCard.\
+-SideBar.\
+-Team.\
+-UserList.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Instalación
+Si te gustaria ver nuestro proyecto en tu navegador:
 
-## Learn More
+`git clone https://github.com/cesarcarreras/Dogtorsito.git`.\
+`cd Dogtorsito`\
+`npm run dev`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Variables de entorno
+PORT = puerto local de conexión .\
+DB = mongodb://localhost/dogtorsito.\
+DB_PROD = Base de datos remota.\
+SECRET = Palabra secreta
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Dogtorsito :heart: :dog:
