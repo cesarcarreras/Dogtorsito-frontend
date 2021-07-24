@@ -4,7 +4,7 @@ const Button = ({
     text='Press me',
     type='submit',
     onPress=()=>{},
-    disabled
+    disabled,
     })=>(
     <button
        disabled={disabled}

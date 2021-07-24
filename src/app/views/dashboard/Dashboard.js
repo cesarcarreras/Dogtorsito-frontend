@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './dashboard.css'
-import {SideBar} from '../../components'
+import { SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint } from  '../../services/auth-ws'
  class Dashboard extends Component{
@@ -14,15 +14,13 @@ import { logoutEndpoint } from  '../../services/auth-ws'
     componentDidMount(){
         const {user} = this.state
         const {history} = this.props
-        //Object.keys({}) noss regresa un [key,key,key]
+        //Object.keys({}) nos regresa un [key,key,key]
         if(!Object.keys(user).length || user === undefined){
             history.push('/login')
         }
     }
 
-    onClickMenu = () => {
-
-    }
+    onClickMenu = () => {}
 
     onLogout=()=>{
         const {history} = this.props
@@ -35,6 +33,7 @@ import { logoutEndpoint } from  '../../services/auth-ws'
             console.log("console error",error)
         })
     }
+
     render(){
        const {user} = this.state
        const {onLogout} = this
@@ -45,7 +44,7 @@ import { logoutEndpoint } from  '../../services/auth-ws'
                     user={user}
                     onLogout={onLogout}
                 />
-                <SubRoutes/>
+                 <SubRoutes/>
             </div>
         </section>
         )

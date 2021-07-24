@@ -1,0 +1,12 @@
+.container-petprofile{
+    margin-left: 20%;
+}
+
+.pet-profile-cards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+}

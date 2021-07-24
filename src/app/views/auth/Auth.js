@@ -15,38 +15,39 @@ export default class Auth  extends Component{
         const {name, value} = e.target
         user[name]= value
         this.setState({ user })
-    }
+    };
+
     handleSubmit=(e)=>{
         const {match,history} = this.props
         const {user} = this.state
         e.preventDefault()
-        console.log("log de user", user)
         const alreadyLoggedIn = () => match.path === "/signup" ? signupEndpoint(user) : loginEndpoint(user);
         alreadyLoggedIn()
             .then(res=>{
                 localStorage.setItem( "user",JSON.stringify(res.data.result) )
-                history.push('/dashboard')
+                history.push('/dashboard/home')
             })
             .catch(error =>{
-                console.log("error",error.response)
+                window.alert(`Contraseña o email incorrectos, intenta nuevamente.`)
             })
-    }
+    };
+
     render(){
         const {handleChange,handleSubmit} = this
         const {match} = this.props
         return(
                 <section className="auth-container">
-                    <div className="container" id="container">
+                    <div className="container-form" id="container">
                         <div className="form-container sign-in-container">
                         <form onSubmit={handleSubmit}>
                             {match.path === "/login" && <h1 className="h1-form">Ingresa</h1>}
                             {match.path === "/signup" && <h1 className="h1-form">Registrate</h1>}
                                 <div>
                                     {match.path === "/signup" &&
-                                                <TextInput
-                                                name='name'
-                                                placeholder='Nombre'
-                                                handleChange={handleChange}
+                                        <TextInput
+                                            name='name'
+                                            placeholder='Nombre'
+                                            handleChange={handleChange}
                                             />
                                         }
                                         <TextInput
@@ -54,7 +55,7 @@ export default class Auth  extends Component{
                                             placeholder='fluffydog@email.com'
                                             handleChange={handleChange}
                                         />
-                                            <TextInput
+                                        <TextInput
                                             name='password'
                                             type='password'
                                             placeholder='· · · · · · · · · ·'

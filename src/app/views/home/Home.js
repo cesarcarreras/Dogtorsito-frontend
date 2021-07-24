@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css'
-import { Footer, Navbar, Cover, About, CardServices, Faq } from '../../components';
+import { Footer, Navbar, Cover, About, CardServices, Team } from '../../components';
 
 
 class Home extends Component{
@@ -11,7 +11,7 @@ class Home extends Component{
             <Cover/>
             <About/>
             <CardServices/>
-            <Faq/>
+            <Team/>
             <Footer/>
          </section>
         )

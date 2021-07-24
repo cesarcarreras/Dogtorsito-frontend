@@ -6,7 +6,8 @@ const TextInput = ({
     name,
     value,
     handleChange = () => {},
-    placeholder=''
+    placeholder='',
+    disabled=false
 }) => (
     <div>
         {/* con este validamos para mostrar el label */}
@@ -23,6 +24,7 @@ const TextInput = ({
         name={name}
         value={value}
         onChange={handleChange}
+        disabled={disabled}
         />
     </div>
 )
