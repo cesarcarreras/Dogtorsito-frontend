@@ -1,4 +1,5 @@
 import {_api} from './api';
+
 //Traer el inventario
 export const inventoryListEndpoint = () => _api.get('/inventory')
 //Crear Producto

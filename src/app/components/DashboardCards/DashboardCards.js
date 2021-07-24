@@ -6,8 +6,6 @@ import apoIcon from '../../assets/images/citas.png';
 import invIcon from '../../assets/images/inventario.png';
 import userIcon from '../../assets/images/perfil.png';
 import logIcon from '../../assets/images/logout-white.png';
-import beagle from '../../assets/images/beagle.jpg'
-import beagle2 from '../../assets/images/beagle2.jpg'
 
 const DashboardCards = () => (
     <div className="cards-list ">

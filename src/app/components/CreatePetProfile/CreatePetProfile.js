@@ -2,7 +2,7 @@ import React ,{Component} from 'react'
 import './style.css'
 
 import { TextInput,Button } from '..';
-import { Label, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 import {usersListEndpoint} from '../../services/user-ws'
 
 import { profileCreateEndpoint, profileListEndpoint} from '../../services/profile-event-ws';
@@ -33,9 +33,9 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
         .catch(error=>{
           console.log(error)
         })
+
         usersListEndpoint()
         .then(res=>{
-          
           this.setState({listUser:res.data.result})
         })
         .catch(error=>{
@@ -55,24 +55,23 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
         //Destructuramos
         const {history} = this.props
         let {profile} = this.state
+
         e.preventDefault()
+
         profileCreateEndpoint(profile)
         .then(res=>{
           console.log(res)
           history.push('/dashboard/clientcreated')
-          /*profiles=[...profiles,res.data.result]
-          this.setState({profiles})*///modificamos el state con los perfiless
-      })
-      .catch(error =>{
-          console.log("error", error)
-      })
+         })
+         .catch(error =>{
+          console.log("error", error.response)
+          })
       }
 
 
     render(){
-    const {profile,listUser} = this.state//Se destructura aqui
+    const {listUser} = this.state//Se destructura aqui
     const {handleChange,handleSubmit} = this
-    const {match} = this.props
 
     return (
 <div>
@@ -116,6 +115,11 @@ class CreatePetProfile extends Component {//creamos componente para el formulari
                     <TextInput
                             name='weight'
                             placeholder='Peso'
+                            handleChange={handleChange}
+                        />
+                        <TextInput
+                            name='owneremail'
+                            placeholder='E-mail del propietario'
                             handleChange={handleChange}
                         />
                         <TextInput

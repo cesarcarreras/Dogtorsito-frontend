@@ -19,7 +19,6 @@ const ModalCreateAppointment = (props) => {
         <ModalBody>
         <CreateAppointment {...props}/>
         </ModalBody>
-        
       </Modal>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './dashboard.css'
 import { SideBar} from '../../components'
 import SubRoutes from '../../../SubRoutes';
 import { logoutEndpoint } from  '../../services/auth-ws'
@@ -14,7 +13,6 @@ import { logoutEndpoint } from  '../../services/auth-ws'
     componentDidMount(){
         const {user} = this.state
         const {history} = this.props
-        //Object.keys({}) nos regresa un [key,key,key]
         if(!Object.keys(user).length || user === undefined){
             history.push('/login')
         }

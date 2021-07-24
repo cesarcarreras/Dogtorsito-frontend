@@ -1,17 +1,35 @@
 import React, {Component} from 'react';
-import ClientInfo from '../../../clients.json'
-import { UserList } from '../../components';
+import { ProfileCard } from '../../components';
+import { profileListEndpoint } from '../../services/profile-event-ws';
 
 
 class Profile extends Component{
-  state = {
-     client_list: ClientInfo
-  }
+    state={
+        user: JSON.parse(localStorage.getItem("user")) || {},
+        profile: JSON.parse(localStorage.getItem("profile")) || {},
+    };
+
+    componentDidMount(){
+        profileListEndpoint()
+        .then(res=>{
+            console.log(res)
+          this.setState({profile:res.data.result})
+        })
+        .catch(error=>{
+          console.log(error)
+        })
+      }
+
     render(){
-        const {client_list} = this.state
+        const {user} = this.state
+        const {profile} = this.state
+        console.log("Que nos regresa el profile ==>>",profile)
         return(
             <section>
-               <UserList clients={client_list}/>
+            <ProfileCard
+               user={user}
+               profile={profile}
+            />
            </section>
         )
     }

@@ -3,8 +3,6 @@ import React, {Component} from 'react';
 import {profileListEndpoint} from '../../services/profile-event-ws';
 import PetCard from '../../components/PetCard/PetCard';
 import './style.css';
-
-
 class Pets extends Component  {
 
     state = {
@@ -36,17 +34,16 @@ console.log("perfiles", profiles)
 
 return (
     <div className="container-petprofile">
+      <div>
+      <a href="/dashboard/create-pet" className="btn-get-started"> Crear Mascota</a>
+      </div>
 		<tbody>
-         <div>
-         <h1>Mascotas</h1>
-        </div>
             <div>
                 <div className="pet-profile-cards">
                     { profiles === undefined ? <span>No hay perfiles</span> : profiles.map (item =>{
                     return <PetCard key={item.id} item={item}/>
                     })}
                 </div>
-                <a href="/dashboard/create-pet"> Crear Mascota</a>
             </div>
 	</tbody>
 </div>

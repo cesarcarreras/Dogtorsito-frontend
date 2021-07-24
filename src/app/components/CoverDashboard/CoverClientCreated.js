@@ -1,5 +1,4 @@
 import './coverDashboard.css'
-import logo from '../../assets/images/logo-dogtorsito.png'
 import dogoOne from '../../assets/images/dog2.JPG'
 
 const CoverClientCreated = () => (

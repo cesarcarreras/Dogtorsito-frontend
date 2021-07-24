@@ -2,6 +2,7 @@
     font-family: 'Oduda';
     src: local('Oduda'), url('./app/assets/fonts/Oduda-Bold-Demo.otf') format('truetype');
   }
+
 *{
     font-family: Oduda;
 }
